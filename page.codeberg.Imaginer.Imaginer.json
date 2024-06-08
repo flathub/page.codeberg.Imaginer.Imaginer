@@ -1,7 +1,7 @@
 {
     "app-id" : "page.codeberg.Imaginer.Imaginer",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "imaginer",
     "finish-args" : [
