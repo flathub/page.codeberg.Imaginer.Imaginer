@@ -1,0 +1,6 @@
+/build
+/build.log
+/repo
+/requirements.in
+/requirements.txt
+/.flatpak-builder
