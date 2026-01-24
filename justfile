@@ -17,7 +17,7 @@ gen_py_deps:
   pip-compile --quiet requirements.in
 
   # compile Flatpak module JSON from requirements.txt
-  req2flatpak --requirements-file requirements.txt --target-platforms 313-x86_64 313-aarch64 --outfile python3-requirements.json
+  req2flatpak --requirements-file requirements.txt --target-platforms 313-x86_64 313-aarch64 --outfile pypi-dependencies.json
 
   # clean up
   rm -f requirements.in requirements.txt
