@@ -35,13 +35,7 @@
                 {
                     "type": "git",
                     "url": "https://codeberg.org/Imaginer/Imaginer.git",
-                    "tag": "v0.2.2",
-                    "x-checker-data": {
-                        "is-main-source": true,
-                        "type": "anitya",
-                        "project-id": 387652,
-                        "tag-template": "v$version"
-                    }
+                    "tag": "v0.2.2"
                 }
             ]
         }
