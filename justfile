@@ -4,7 +4,7 @@ set quiet
 _list-recipes:
   {{quote(just_executable())}} --list --justfile={{quote(justfile())}}
 
-# Regenerate `python3-requirements.json`
+# Regenerate `pypi-dependencies.json`
 gen_py_deps target-platforms='313-x86_64 313-aarch64':
   #!/usr/bin/env bash
   set -euo pipefail
