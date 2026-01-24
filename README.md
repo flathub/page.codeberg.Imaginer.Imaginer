@@ -11,10 +11,12 @@ uv tool install pip-tools
 uv tool install req2flatpak
 ```
 
-Then run:
+Then we need to determine the Python major-minor version shipped with the specified GNOME runtime. The [GNOME runtime](https://gitlab.gnome.org/GNOME/gnome-build-meta) is based on the [Freedesktop SDK](https://gitlab.com/freedesktop-sdk/freedesktop-sdk) – to determine which version exactly (e.g. `freedesktop-sdk-25.08.7`), see [this file](https://gitlab.gnome.org/GNOME/gnome-build-meta/-/blob/gnome-49/elements/freedesktop-sdk.bst?ref_type=heads#L7) in the corresponding branch (e.g. `gnome-49`). With this information, see the [Freedesktop SDK's `NEWS.yaml`](https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/release/25.08/NEWS.yml) in the corresponding branch (e.g. `release/25.08`) to determine the Python version shipped (search for the latest `Update python3 to v` line).
+
+Finally use that information to regenerate the `python3-requirements.json` file. The first argument to the `gen_py_deps` Just recipe corresponds to `req2flatpak`'s [`--target-platforms` argument](https://johannesjh.github.io/req2flatpak/main/cli.html#named-arguments). For Python 3.13, you'd run: 
 
 ```sh
-just gen_py_deps
+just gen_py_deps '313-x86_64 313-aarch64'
 ```
 
 ### Build the Flatpak locally
