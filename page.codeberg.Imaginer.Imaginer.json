@@ -31,6 +31,9 @@
             "config-opts": [
                 "-Dbuildtype=release"
             ],
+            "post-install": [
+              "desktop-file-edit --set-key=Categories --set-value=Graphics \"${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop\""
+            ],
             "sources" : [
                 {
                     "type": "git",
